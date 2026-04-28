@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <section class="mdl-herodesktop">
-        <div class="swiper">
+    <main id="main-content" role="main">
+
+    <section class="mdl-herodesktop" aria-label="Hero principal">
+        <div class="swiper" role="region" aria-roledescription="carousel" aria-label="Carrusel principal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="media/desktop-slide1.jpg" alt="Impulsant futur" class="bg-media">
@@ -22,7 +25,7 @@
                         <h2 class="heading">Impulsant futur<br><strong>vora el mar</strong></h2>
                         <div class="hero-box">
                             <p class="hero-txt">Uneix-te a l'ecosistema empresarial on les idees del futur neixen davant del mar</p>
-                            <a href="#" class="btn btn-primary" data-text="SOL·LICITAR VISITA">
+                            <a href="#" class="btn btn-primary" data-text="SOL·LICITAR VISITA" aria-label="Sol·licitar visita">
                                 <span>SOL·LICITAR VISITA</span>
                             </a>
                         </div>
@@ -35,7 +38,7 @@
                         <h2 class="heading">Lorem Ipsum<br><strong>es simplemente el texto</strong></h2>
                         <div class="hero-box">
                             <p class="hero-txt">Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</p>
-                            <a href="#" class="btn btn-primary" data-text="MÉS INFORMACIÓ">
+                            <a href="#" class="btn btn-primary" data-text="MÉS INFORMACIÓ" aria-label="Més informació">
                                 <span>MÉS INFORMACIÓ</span>
                             </a>
                         </div>
@@ -43,19 +46,23 @@
                 </div>
             </div>
             
-            <div class="swiper-navigation">
-                <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
-                <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="swiper-navigation" role="group" aria-label="Controls del carrusel">
+                <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Anterior">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                </div>
+                <div class="swiper-button-next" role="button" tabindex="0" aria-label="Siguiente">
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="mdl-seodesktop">
+    <section class="mdl-seodesktop" aria-label="Seccion informativa">
         <div class="seo-sticky-container">
-            <video class="seo-bg-video" src="media/seo-video.mp4" autoplay loop muted playsinline></video>
-           <div class="seo-overlay-dark"></div> 
+            <video class="seo-bg-video" src="media/seo-video.mp4" autoplay loop muted playsinline aria-hidden="true" tabindex="-1"></video>
+           <div class="seo-overlay-dark" aria-hidden="true"></div> 
             
-            <div class="seo-mask-white js-seo-mask"></div>
+            <div class="seo-mask-white js-seo-mask" aria-hidden="true"></div>
             
             <div class="seo-initial-text js-seo-initial">
                 <div class="initial-text-inner">
@@ -71,7 +78,7 @@
                         <span>el futur dels espais de treball.<br>oficines per créixer sobre el mar.<br>creació de valor i competitivitat.<br>futur des del port.</span>
                     </h2>
                     <p  class="seo-txt">Treballar al WTC Barcelona és connectar amb un entorn únic on el mar inspira cada idea. Un ecosistema vibrant que impulsa talent, benestar i innovació. Aquí, el futur es dissenya vora el Mediterrani.</p>
-                    <a href="#" class="btn btn-secondary" data-text="SOL·LICITAR VISITA">
+                    <a href="#" class="btn btn-secondary" data-text="SOL·LICITAR VISITA" aria-label="Sol·licitar visita">
                         <span>SOL·LICITAR VISITA</span>
                     </a>
                 </div>
@@ -88,7 +95,7 @@
                         <div class="mobile-progress-bar"></div>
                     </div>
                     <p class="mobile-description">Treballar al WTC Barcelona és connectar amb un entorn únic on el mar inspira cada idea. Un ecosistema vibrant que impulsa talent, benestar i innovació. Aquí, el futur es dissenya vora el Mediterrani.</p>
-                    <a href="#" class="btn btn-secondary" data-text="SOL·LICITAR VISITA">
+                    <a href="#" class="btn btn-secondary" data-text="SOL·LICITAR VISITA" aria-label="Sol·licitar visita">
                         <span>SOL·LICITAR VISITA</span>
                     </a>
                 </div>
@@ -96,21 +103,23 @@
         </div>
     </section>
 
-    <div class="mobile-mock-nav mobile-mock-nav-hero">
-        <div class="mock-btn"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="mobile-mock-nav mobile-mock-nav-hero" aria-hidden="true">
+        <div class="mock-btn"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></div>
         <div class="mock-url">
-            <i class="fa-solid fa-laptop"></i>
+            <i class="fa-solid fa-laptop" aria-hidden="true"></i>
             <span>wtcbarcelona.com</span>
-            <i class="fa-solid fa-rotate-right"></i>
+            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
         </div>
-        <div class="mock-btn"><i class="fa-solid fa-ellipsis"></i></div>
+        <div class="mock-btn"><i class="fa-solid fa-ellipsis" aria-hidden="true"></i></div>
     </div>
 
-    <div class="mobile-mock-nav mobile-mock-nav-seo">
+    <div class="mobile-mock-nav mobile-mock-nav-seo" aria-hidden="true">
         <div class="mock-url">
             <span>wtcbarcelona.com</span>
         </div>
     </div>
+
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
