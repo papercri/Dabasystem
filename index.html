@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WTC Barcelona - Daba System - Prueba técnica Cristiana Sollini</title>
+    <link rel="preload" as="image" href="media/desktop-slide1.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
         <div class="swiper" role="region" aria-roledescription="carousel" aria-label="Carrusel principal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="media/desktop-slide1.jpg" alt="Impulsant futur" class="bg-media">
+                    <img src="media/desktop-slide1.jpg" alt="Impulsant futur" class="bg-media" fetchpriority="high" decoding="async">
                     <div class="hero-content wow-up">
                         <h2 class="heading">Impulsant futur<br><strong>vora el mar</strong></h2>
                         <div class="hero-box">
@@ -33,7 +34,7 @@
                 </div>
                 
                 <div class="swiper-slide">
-                    <img src="media/desktop-slide2.jpg" alt="Creixement empresarial" class="bg-media">
+                    <img src="media/desktop-slide2.jpg" alt="Creixement empresarial" class="bg-media" loading="lazy" decoding="async">
                     <div class="hero-content">
                         <h2 class="heading">Lorem Ipsum<br><strong>es simplemente el texto</strong></h2>
                         <div class="hero-box">
@@ -59,7 +60,7 @@
 
     <section class="mdl-seodesktop" aria-label="Seccion informativa">
         <div class="seo-sticky-container">
-            <video class="seo-bg-video" src="media/seo-video.mp4" autoplay loop muted playsinline aria-hidden="true" tabindex="-1"></video>
+            <video class="seo-bg-video" src="media/seo-video.mp4" autoplay loop muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
            <div class="seo-overlay-dark" aria-hidden="true"></div> 
             
             <div class="seo-mask-white js-seo-mask" aria-hidden="true"></div>
